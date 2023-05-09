@@ -4,22 +4,22 @@ import { useMemo } from "react";
 const useConversation = () => {
   const params = useParams();
 
-  const converationId = useMemo(() => {
-    if (!params?.converationId) {
+  const conversationId = useMemo(() => {
+    if (!params?.conversationId) {
       return "";
     }
 
-    return params.converationId as string;
-  }, [params?.converationId]);
+    return params.conversationId as string;
+  }, [params?.conversationId]);
 
-  const isOpen = useMemo(() => !!converationId, [converationId]);
+  const isOpen = useMemo(() => !!conversationId, [conversationId]);
 
   return useMemo(
     () => ({
       isOpen,
-      converationId,
+      conversationId,
     }),
-    [converationId, isOpen]
+    [conversationId, isOpen]
   );
 };
 
