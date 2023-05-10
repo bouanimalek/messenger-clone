@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { FullConversationType } from "../types";
 import { User } from "@prisma/client";
 
-const useOtherUsers = (
+const useOtherUser = (
   conversation:
     | FullConversationType
     | {
@@ -25,4 +25,4 @@ const useOtherUsers = (
   return otherUser;
 };
 
-export default useOtherUsers;
+export default useOtherUser;
